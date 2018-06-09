@@ -36,8 +36,10 @@ docker exec -it grv-masternode bash
   root@container# cat /var/log/supervisor/supervisord.log
   # Change to gravium user
   root@container# sudo su gravium
-  gravium@container# cat /home/gravium/.gravium/debug.log
+  gravium@container# cat /home/gravium/.graviumcore/debug.log
   gravium@container# gravium-cli getinfo
+  gravium@container# gravium-cli getblockcount
+  gravium@container# gravium-cli masternode status
 ```
 
 ## Debbuging within a container during run (skip start.sh execution)
