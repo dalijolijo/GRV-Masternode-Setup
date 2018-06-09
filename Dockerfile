@@ -13,8 +13,8 @@ LABEL maintainer="David B. (dalijolijo)"
 LABEL version="0.1"
 
 # Make ports available to the world outside this container
-# DefaultPort = 11000
-# RPCPort = 11010
+# DefaultPort = 11010
+# RPCPort = 11000
 EXPOSE 11000 11010
 
 USER root
@@ -23,7 +23,7 @@ USER root
 SHELL ["/bin/bash", "-c"]
 
 # Define environment variable
-ENV GRAVPWD "gravium"
+ENV GRVPWD "gravium"
 
 RUN echo '*** Gravium (GRV) Masternode ***'
 
@@ -46,6 +46,7 @@ RUN echo '*** Running updates and installing required packages ***' && \
                         autoconf \
                         automake \
                         autotools-dev \
+                        bsdmainutils \
                         build-essential \
                         curl \
                         git \
@@ -54,8 +55,8 @@ RUN echo '*** Running updates and installing required packages ***' && \
                         libminiupnpc-dev \
                         libssl-dev \
                         libtool \
-                        libzmq5-dev \
                         pkg-config \
+                        python-virtualenv \
                         software-properties-common \
                         sudo \
                         supervisor \
@@ -65,7 +66,15 @@ RUN echo '*** Running updates and installing required packages ***' && \
     apt-get update -y && \
     apt-get upgrade -y && \
     apt-get install -y  libdb4.8-dev \
-                        libdb4.8++-dev
+                        libdb4.8++-dev 
+
+
+
+
+
+
+
+
 
 #
 # Cloning and Compiling Gravium Wallet
