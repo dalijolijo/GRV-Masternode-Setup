@@ -1,5 +1,5 @@
 # GRV-Masternode-Setup
-This script helps you to install a Gravium GRV Node as a docker container.
+This script helps you to install a Gravium (GRV) Masternode as a docker container.
 
 ## Deploy as a docker container
 
