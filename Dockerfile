@@ -1,6 +1,6 @@
 # Gravium (GRV) Masternode - Dockerfile (06-2018)
 #
-# The Dockerfile will install all required stuff to run a Gravium (GRV) Masternode and based on the script gravium_masternode.sh (see: https://github.com/Gravium/gravium-docs/scripts/gravium_masternode.sh)
+# The Dockerfile will install all required stuff to run a Gravium (GRV) Masternode. 
 # Gravium Repo : https://github.com/Gravium
 # 
 # To build a docker image for grv-masternode from the Dockerfile the gravium.conf is also needed.
