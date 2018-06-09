@@ -183,7 +183,7 @@ elif [[ $OS =~ "Ubuntu" ]] || [[ $OS =~ "ubuntu" ]] || [[ $OS =~ "Debian" ]] || 
     which ufw >/dev/null
     if [ $? -ne 0 ];then
         printf "Missing firewall (ufw) on your system.\n"
-        printf "Automated firewall setup will open the following ports: 22, ${DEFAULT_PORT} and ${RPC_PORT}}\n"
+        printf "Automated firewall setup will open the following ports: 22, ${DEFAULT_PORT} and ${RPC_PORT}\n"
         printf "\nDo you want to install firewall (ufw) and execute automated firewall setup?\n"
         printf "Enter [Y]es or [N]o and Hit [ENTER]: "
         read FIRECONF
