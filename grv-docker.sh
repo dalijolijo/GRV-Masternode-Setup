@@ -24,12 +24,15 @@ then
 fi
 
 if [[ $REUSE =~ "N" ]] || [[ $REUSE =~ "n" ]]; then
-        printf "\nEnter new password for [gravium] user and Hit [ENTER]: "
+        printf "\nEnter the IP-address of your Gravium Masternode VPS and Hit [ENTER]: "
+        read GRVIP
+	printf "\nEnter new Password for [gravium] user and Hit [ENTER]: "
         read GRVPWD
-        printf "Enter your gravium masternode genkey respond and Hit [ENTER]: "
+        printf "Enter your Gravium Masternode genkey respond and Hit [ENTER]: "
         read MN_KEY
 else
         source $CONFIG
+	GRVIP=$(echo $externalip)
         GRVPWD=$(echo $rpcpassword)
         MN_KEY=$(echo $masternodeprivkey)
 fi
@@ -253,7 +256,7 @@ if [ $? -eq 0 ];then
 fi
 docker rm ${CONTAINER_NAME} >/dev/null
 docker pull ${DOCKER_REPO}/grv-masternode
-docker run -p ${DEFAULT_PORT}:${DEFAULT_PORT} -p ${RPC_PORT}:${RPC_PORT} --name ${CONTAINER_NAME}  -e GRVPWD="${GRVPWD}" -e MN_KEY="${MN_KEY}" -v /home/gravium:/home/gravium:rw -d ${DOCKER_REPO}/grv-masternode
+docker run -p ${DEFAULT_PORT}:${DEFAULT_PORT} -p ${RPC_PORT}:${RPC_PORT} --name ${CONTAINER_NAME} -e GRVIP="${GRVIP}" -e GRVPWD="${GRVPWD}" -e MN_KEY="${MN_KEY}" -v /home/gravium:/home/gravium:rw -d ${DOCKER_REPO}/grv-masternode
 
 #
 # Show result and give user instructions
