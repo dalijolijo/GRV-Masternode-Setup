@@ -33,3 +33,7 @@ wget https://raw.githubusercontent.com/dalijolijo/GRV-Masternode-Setup/master/gr
 chmod +x grv-docker.sh
 ./grv-docker.sh
 ```
+
+### For more details to docker related stuff have a look at:
+* GRV-Masternode-Setup/BUILD_README.md
+* GRV-Masternode-Setup/RUN_README.md
