@@ -24,7 +24,9 @@ chown -R gravium:gravium /home/gravium/
 sudo -u gravium cp /tmp/gravium.conf /home/gravium/.gravium/
 sed -i "s/^\(rpcuser=\).*/rpcuser=grvmasternode${GRVPWD}/" /home/gravium/.gravium/gravium.conf
 sed -i "s/^\(rpcpassword=\).*/rpcpassword=${GRVPWD}/" /home/gravium/.gravium/gravium.conf
+sed -i "s/^\(externalip=\).*/externalip=${GRVIP}/" /home/gravium/.gravium/gravium.conf 
 sed -i "s/^\(masternodeprivkey=\).*/masternodeprivkey=${MN_KEY}/" /home/gravium/.gravium/gravium.conf
+cp /home/gravium/.gravium/gravium.conf /home/gravium/.graviumcore/gravium.conf
 
 #
 # Downloading bootstrap file (not yet available)
@@ -34,8 +36,8 @@ sed -i "s/^\(masternodeprivkey=\).*/masternodeprivkey=${MN_KEY}/" /home/gravium/
 #
 #printf "** Downloading bootstrap file ***\n"
 #cd /home/gravium/.gravium/
-#if [ ! -d /home/gravium/.gravium/blocks ] && [ "$(curl -Is https://bit-cloud.info/${BOOTSTRAP} | head -n 1 | tr -d '\r\n')" = "HTTP/1.1 200 OK" ] ; then \
-#        sudo -u gravium wget https://bit-cloud.info/${BOOTSTRAP}; \
+#if [ ! -d /home/gravium/.gravium/blocks ] && [ "$(curl -Is https://gravium.io/${BOOTSTRAP} | head -n 1 | tr -d '\r\n')" = "HTTP/1.1 200 OK" ] ; then \
+#        sudo -u gravium wget https://gravium.io/${BOOTSTRAP}; \
 #        sudo -u gravium tar -xvzf ${BOOTSTRAP}; \
 #        sudo -u gravium rm ${BOOTSTRAP}; \
 #fi
