@@ -2,7 +2,7 @@
 set -u
 
 DOCKER_REPO="dalijolijo"
-CONFIG="/home/gravium/.gravium/gravium.conf"
+CONFIG="/home/gravium/.graviumcore/gravium.conf"
 CONTAINER_NAME="grv-masternode"
 DEFAULT_PORT="11010"
 RPC_PORT="11000"
