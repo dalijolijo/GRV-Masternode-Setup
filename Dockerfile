@@ -67,15 +67,7 @@ RUN echo '*** Running updates and installing required packages ***' && \
     apt-get upgrade -y && \
     apt-get install -y  libdb4.8-dev \
                         libdb4.8++-dev 
-
-
-
-
-
-
-
-
-
+                        
 #
 # Cloning and Compiling Gravium Wallet
 #
@@ -83,12 +75,12 @@ RUN echo '*** Cloning and Compiling Gravium Wallet ***' && \
     cd && \
     echo "Execute a git clone of Gravium. Please wait..." && \
     git clone https://github.com/Gravium/gravium.git && \
-    cd Gravium && \
+    cd gravium && \
     ./autogen.sh && \
     ./configure --disable-dependency-tracking --enable-tests=no --without-gui && \
     make && \
     cd && \
-    cd Gravium/src && \
+    cd gravium/src && \
     strip graviumd && \
     cp graviumd /usr/local/bin && \
     strip gravium-cli && \
@@ -97,7 +89,7 @@ RUN echo '*** Cloning and Compiling Gravium Wallet ***' && \
     cp gravium-tx /usr/local/bin && \
     chmod 775 /usr/local/bin/graviumd* && \   
     cd && \
-    rm -rf Gravium
+    rm -rf gravium
 
 #
 # Copy Supervisor Configuration and gravium.conf
