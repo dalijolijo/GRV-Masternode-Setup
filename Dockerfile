@@ -55,6 +55,7 @@ RUN echo '*** Running updates and installing required packages ***' && \
                         libminiupnpc-dev \
                         libssl-dev \
                         libtool \
+                        libzmq5-dev \
                         pkg-config \
                         python-virtualenv \
                         software-properties-common \
