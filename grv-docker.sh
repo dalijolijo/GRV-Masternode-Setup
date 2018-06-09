@@ -26,7 +26,7 @@ fi
 if [[ $REUSE =~ "N" ]] || [[ $REUSE =~ "n" ]]; then
         printf "\nEnter the IP-address of your Gravium Masternode VPS and Hit [ENTER]: "
         read GRVIP
-	printf "\nEnter new Password for [gravium] user and Hit [ENTER]: "
+	printf "Enter new Password for [gravium] user and Hit [ENTER]: "
         read GRVPWD
         printf "Enter your Gravium Masternode genkey respond and Hit [ENTER]: "
         read MN_KEY
