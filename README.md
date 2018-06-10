@@ -37,3 +37,6 @@ chmod +x grv-docker.sh
 ### For more details to docker related stuff have a look at:
 * GRV-Masternode-Setup/BUILD_README.md
 * GRV-Masternode-Setup/RUN_README.md
+
+### You want to thank?
+My GRV Donation Address: GUHemKGSaPwvqN5vP31yysCuRbeitajHJM
