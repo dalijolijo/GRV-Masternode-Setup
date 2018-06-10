@@ -15,7 +15,8 @@ LABEL version="0.1"
 # Make ports available to the world outside this container
 # DefaultPort = 11010
 # RPCPort = 11000
-EXPOSE 11000 11010
+# TORPort
+EXPOSE 11000 11010 9050
 
 USER root
 
