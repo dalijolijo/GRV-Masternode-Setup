@@ -4,7 +4,7 @@ This script helps you to install a Gravium (GRV) Masternode as a docker containe
 ## Deploy as a docker container
 
 Support for the following distribution versions:
-* Fedora 7 (x86_64-centos-7)
+* CentOS 7.4 (x86_64-centos-7)
 * Fedora 26 (x86_64-fedora-26)
 * Fedora 27 (x86_64-fedora-27)
 * Fedora 28 (x86_64-fedora-28)
