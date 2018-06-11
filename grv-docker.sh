@@ -24,7 +24,9 @@ then
 fi
 
 if [[ $REUSE =~ "N" ]] || [[ $REUSE =~ "n" ]]; then
-        printf "\nEnter the IP-address of your Gravium Masternode VPS and Hit [ENTER]: "
+        printf "\nFound the following IP-addresses on this Server:\n"
+        hostname -I
+	printf "\nEnter the IP-address of your Gravium Masternode VPS and Hit [ENTER]: "
         read GRVIP
 	printf "Enter new Password for [gravium] user and Hit [ENTER]: "
         read GRVPWD
