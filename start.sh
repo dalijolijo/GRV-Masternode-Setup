@@ -22,10 +22,10 @@ printf "** Set rpcuser, rpcpassword and masternode genkey ***\n"
 mkdir -p /home/gravium/.graviumcore/
 chown -R gravium:gravium /home/gravium/
 sudo -u gravium cp /tmp/gravium.conf /home/gravium/.graviumcore/
-sed -i "s/^\(rpcuser=\).*/rpcuser=grvmasternode${GRVPWD}/" /home/gravium/.graviumcore/gravium.conf
-sed -i "s/^\(rpcpassword=\).*/rpcpassword=${GRVPWD}/" /home/gravium/.graviumcore/gravium.conf
-sed -i "s/^\(externalip=\).*/externalip=${GRVIP}/" /home/gravium/.graviumcore/gravium.conf 
-sed -i "s/^\(masternodeprivkey=\).*/masternodeprivkey=${MN_KEY}/" /home/gravium/.graviumcore/gravium.conf
+sed -i "s|^\(rpcuser=\).*|rpcuser=grvmasternode$(openssl rand -base64 32)|g" /home/gravium/.graviumcore/gravium.conf
+sed -i "s|^\(rpcpassword=\).*|rpcpassword=$(openssl rand -base64 32)|g" /home/gravium/.graviumcore/gravium.conf
+sed -i "s|^\(externalip=\).*|externalip=${GRVIP}|g" /home/gravium/.graviumcore/gravium.conf 
+sed -i "s|^\(masternodeprivkey=\).*|masternodeprivkey=${MN_KEY}|g" /home/gravium/.graviumcore/gravium.conf
 
 #
 # Downloading bootstrap file (not yet available)
