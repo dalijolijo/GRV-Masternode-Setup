@@ -19,7 +19,7 @@ chown -R gravium:gravium /home/gravium/
 sudo -u gravium cp /tmp/gravium.conf /home/gravium/.graviumcore/
 sed -i "s|^\(rpcuser=\).*|rpcuser=grvmasternode$(openssl rand -base64 32)|g" /home/gravium/.graviumcore/gravium.conf
 sed -i "s|^\(rpcpassword=\).*|rpcpassword=$(openssl rand -base64 32)|g" /home/gravium/.graviumcore/gravium.conf
-sed -i "s|^\(externalip=\).*|externalip=${GRVIP}|g" /home/gravium/.graviumcore/gravium.conf 
+sed -i "s|^\(externalip=\).*|externalip=${GRV_IP}|g" /home/gravium/.graviumcore/gravium.conf 
 sed -i "s|^\(masternodeprivkey=\).*|masternodeprivkey=${MN_KEY}|g" /home/gravium/.graviumcore/gravium.conf
 
 #
