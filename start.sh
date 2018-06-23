@@ -4,11 +4,6 @@ set -u
 BOOTSTRAP='bootstrap.tar.gz'
 
 #
-# Set passwd of gravium user
-#
-echo gravium:${GRVPWD} | chpasswd
-
-#
 # Downloading gravium.conf
 #
 cd /tmp/
