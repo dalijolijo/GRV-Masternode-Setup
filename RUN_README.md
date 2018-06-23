@@ -20,7 +20,7 @@ docker pull <repository>/grv-masternode
 
 ## Run docker container
 ```
-docker run -p 11000:11000 -p 11010:11010 --name grv-masternode -e GRVPWD='NEW_GRV_PWD' -e MN_KEY='YOUR_MN_KEY' -v /home/gravium:/home/gravium:rw -d <repository>/grv-masternode
+docker run -p 11000:11000 -p 11010:11010 --name grv-masternode -e GRV_IP='GRV_IP' -e MN_KEY='YOUR_MN_KEY' -v /home/gravium:/home/gravium:rw -d <repository>/grv-masternode
 docker ps
 ```
 
@@ -44,7 +44,7 @@ docker exec -it grv-masternode bash
 
 ## Debbuging within a container during run (skip start.sh execution)
 ```
-docker run -p 11000:11000 -p 11010:11010 --name grv-masternode -e GRVPWD='NEW_GRV_PWD' -e MN_KEY='YOUR_MN_KEY' -v /home/gravium:/home/gravium:rw --entrypoint bash <repository>/grv-masternode
+docker run -p 11000:11000 -p 11010:11010 --name grv-masternode -e GRV_IP='GRV_IP' -e MN_KEY='YOUR_MN_KEY' -v /home/gravium:/home/gravium:rw --entrypoint bash <repository>/grv-masternode
 ```
 
 ## Stop docker container
