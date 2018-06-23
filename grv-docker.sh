@@ -8,6 +8,14 @@ DEFAULT_PORT="11010"
 RPC_PORT="11000"
 
 #
+# Color definitions
+#
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NO_COL='\033[0m'
+GRV_COL='\033[0;32m'
+
+#
 # Check if gravium.conf already exist. Set gravium user pwd
 #
 clear
