@@ -279,5 +279,5 @@ else
     printf "\nShow your running docker container \'${CONTAINER_NAME}\' with 'docker ps'\n"
     sudo docker ps | grep ${CONTAINER_NAME}
     printf "\nJump inside the docker container with 'docker exec -it ${CONTAINER_NAME} bash'\n"
-    printf "${GREEN}HAVE FUN!${GREEN}\n\n"
+    printf "${GREEN}HAVE FUN!${NO_COL}\n\n"
 fi
