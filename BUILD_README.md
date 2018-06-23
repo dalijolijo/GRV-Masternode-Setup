@@ -26,7 +26,7 @@ swapon /swapfile
 
 ## Build docker image
 ```
-docker build [--build-arg GRVPWD='<gravium user pwd>'] -t grv-masternode .
+docker build -t grv-masternode .
 ```
 
 ## Push docker image to hub.docker
